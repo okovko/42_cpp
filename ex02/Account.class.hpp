@@ -38,7 +38,6 @@ private:
 	static int	_totalAmount;
 	static int	_totalNbDeposits;
 	static int	_totalNbWithdrawals;
-	static int	_totalNbChecks;
 
 	static void	_displayTimestamp( void );
 
@@ -46,6 +45,7 @@ private:
 	int				_amount;
 	int				_nbDeposits;
 	int				_nbWithdrawals;
+	mutable int		_totalNbChecks;
 
 	Account( void );
 
