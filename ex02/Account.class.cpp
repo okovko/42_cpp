@@ -3,6 +3,11 @@
 
 #include "Account.class.hpp"
 
+int Account::_nbAccounts = 0;
+int Account::_totalAmount = 0;
+int Account::_totalNbDeposits = 0;
+int Account::_totalNbWithdrawals = 0;
+
 Account::Account(void)
 {
 	_accountIndex = _nbAccounts;
@@ -105,7 +110,7 @@ void	Account::displayStatus(void) const
 {
 	_displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";deposits:" <<
-		_nbDeposits << ";withdrawals:" << _nbWithdrawals;
+		_nbDeposits << ";withdrawals:" << _nbWithdrawals << std::endl;
 }
 
 void	Account::displayAccountsInfos(void)
